@@ -276,7 +276,8 @@ def get_candidate_data(candidate_id):
             # Create a cursor with cnx.cursor(dictionary=True) as cursor:
             with cnx.cursor(dictionary=True) as cursor:
                 # Execute a SELECT query with parameterized input
-                query = "SELECT post_id, meta_key, meta_value FROM `itll_postmeta` WHERE post_id = %s"
+                # query = "SELECT post_id, meta_key, meta_value FROM `itll_postmeta` WHERE post_id = %s"
+                query = "SELECT post_id, meta_key, meta_value FROM `rkg7_postmeta` WHERE post_id = %s"
                 cursor.execute(query, (candidate_id,))
 
                 # Fetch results and process the records
